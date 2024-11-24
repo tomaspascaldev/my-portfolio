@@ -1,3 +1,10 @@
 import { Route } from '@angular/router';
 
-export const appRoutes: Route[] = [];
+import { PortfolioComponent } from './features/portfolio/portfolio.component';
+
+export const appRoutes: Route[] = [
+    {
+        path: '',
+        component: PortfolioComponent
+    }
+];

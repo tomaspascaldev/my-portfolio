@@ -1,0 +1,52 @@
+<div class="section" id="reference">
+    <div class="container cc-reference">
+        <div class="h4 mb-4 text-center title">References</div>
+        <div class="card" data-aos="zoom-in">
+            <div class="carousel slide" id="cc-Indicators" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li class="active" data-target="#cc-Indicators" data-slide-to="0"></li>
+                    <li data-target="#cc-Indicators" data-slide-to="1"></li>
+                    <li data-target="#cc-Indicators" data-slide-to="2"></li>
+                    <li data-target="#cc-Indicators" data-slide-to="3"></li>
+                    <li data-target="#cc-Indicators" data-slide-to="4"></li>
+
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-lg-2 col-md-3 cc-reference-header">
+                                <img src={{firstReference.picture}} alt="Image" />
+                            </div>
+                            <div class="col-lg-10 col-md-9">
+                                <div class="h5 mt-1">{{firstReference.name}}</div>
+                                <p class="category">{{firstReference.role}} {{firstReference.company}} Email: {{firstReference.email}} Phone:{{firstReference.phone}}</p>
+                                <p>{{firstReference.reference}}</p>
+                                <a class="btn btn-primary" href={{firstReference.referenceURL}} target="_blank" data-aos="zoom-in"
+                                    data-aos-anchor="data-aos-anchor">See reference</a>
+                            </div>
+                        </div>
+                    </div>
+                    @for (ref of references; track $index) {
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-lg-2 col-md-3 cc-reference-header">
+                                <img src={{ref.picture}} alt="Image" />
+                    
+                    
+                            </div>
+                            <div class="col-lg-10 col-md-9">
+                                <div class="h5 mt-1">{{ref.name}}</div>
+                                <p class="category">{{ref.role}} {{ref.company}} Email: {{ref.email}} Phone: {{ref.phone}}</p>
+                                <p>{{ref.reference}}</p>
+                                <a class="btn btn-primary" href={{ref.referenceURL}} target="_blank" data-aos="zoom-in"
+                                    data-aos-anchor="data-aos-anchor">See reference</a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
